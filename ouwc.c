@@ -2,7 +2,7 @@
 #include <stdio.h>
 int main()
 {
-	printf(placeholder);
+	printf("placeholder");
 	return 0;
 }
 
