@@ -1,4 +1,6 @@
-
+#ifndef DEBUG
+#define NDEBUG
+#endif
 #ifndef UTIL_H
 #define UTIL_H
 

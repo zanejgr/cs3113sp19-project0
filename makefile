@@ -1,14 +1,18 @@
 CC = gcc
-cflags = -g -O3
+cflags := -g -O3
+executables = oucat ouecho ouhead ouseq outail ouwc
 
-all: oucat ouecho ouhead ouseq outail ouwc
+all: $(executables)
+debug: cflags += -DDEBUG 
+debug: all
+
 clean:
-	rm -f *.o
+	$(RM) $(executables)
 
 oucat:
 	$(CC) oucat.c $(cflags) -o oucat
 ouecho:
-	$(CC) ouecho.c $(cfags) -o ouecho
+	$(CC) ouecho.c $(cflags) -o ouecho
 ouhead:
 	$(CC) ouhead.c $(cflags) -o ouhead
 ouseq:
