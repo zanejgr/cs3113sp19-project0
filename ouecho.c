@@ -1,12 +1,13 @@
-#ifdef DEBUG
-#include "Util.h"
-#endif
-
-
-#include <stdio.h>
-int main()
+#include "proj0.h"
+int main(int argc,char ** argv)
 {
-	printf("placeholder");
+	if(argc==1){
+		puts("");
+		return 0;
+	}
+	for(int i = 1; i < argc-1;i++)
+		printf("%s ",argv[i]);
+	printf("%s",argv[argc-1]);
 	return 0;
 }
 
